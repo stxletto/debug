@@ -72,3 +72,12 @@ ReadFile
 bp GetDriveTypeA 获取磁盘驱动器类型 
 bp GetLogicalDrives 获取逻辑驱动器符号 
 bp GetLogicalDriveStringsA 获取当前所有逻辑驱动器的根驱动器路径
+
+修改寄存器命令 
+r @eax=1  //将eax置为1
+
+修改内存命令
+ed 80505648 00001234 //将内存为80505648的数据改为00001234
+
+写入字节：eb f8da6000 90 90 90 90 90
+写入字符串：ea f8da6000 "my ass" eu f8da6000 "my ass"
